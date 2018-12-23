@@ -1,0 +1,166 @@
+* {
+    background-color: #1c1d21;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    padding: 0.6rem 4rem;
+    margin:0
+}
+
+.header {
+    position: relative;
+    background-position: top;
+    top: 0;
+    left: 0;
+    height: 95vh;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    z-index: 0;
+    color: #1c1d21;
+}
+
+.header h1:after {
+    content: '';
+    width: 7rem;
+    height: 95vh;
+    background-color: yellow;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+
+}
+
+.header h1 span {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.header img {
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    animation: GoDown 3s infinite;
+    width: 3%
+}
+
+@keyframes GoDown {
+    0%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(-25%);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}
+
+.portfolio {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    background-color: yellow;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*flex-direction: row;*/
+}
+
+.portfolio .port-image {
+   
+    width: 250px;
+    margin: 10px;
+    /*box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);*/
+    background-color: #1c1d21;
+    position: relative;
+    padding: 2rem 1rem;
+}
+
+.portfolio .port-image:hover {
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    width: 260px;
+    transition: all 0.7s;
+
+    
+}
+
+.portfolio .port-image h2 {
+    text-align: center;
+    animation: fromTop 2s ease-out forwards;
+}
+
+@keyframes fromTop {
+    0%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(5%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.portfolio .port-image p {
+    color: #aeaeae;
+    font-weight: 300;
+    text-align: center
+}
+
+.portfolio .port-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+
+.portfolio .port-image img:hover{
+    content: 'Check out ?';
+    color:yellow;
+    opacity: 0.5;
+    position: relative;
+    text-align: center
+}
+
+.portfolio .port-image::after{
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    width: 50%;
+    height: 1rem;
+    top: 0;
+    left: 0
+}
+
+.portfolio .port-image::before{
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    width: 50%;
+    height: 1rem;
+    bottom: 0;
+    right: 0
+}
